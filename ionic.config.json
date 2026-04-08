@@ -1,0 +1,8 @@
+{
+  "name": "taiga-mobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "io.taiga.mobile"
+}
