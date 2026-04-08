@@ -23,7 +23,18 @@ import { AuthService } from '../../services/auth.service';
 import { ServerConfigService } from '../../services/server-config.service';
 import { LoginCredentials, TaigaServer } from '../../models';
 import { addIcons } from 'ionicons';
-import { eyeOutline, eyeOffOutline, settingsOutline, serverOutline, chevronDownOutline } from 'ionicons/icons';
+import { 
+  eyeOutline, 
+  eyeOffOutline, 
+  settingsOutline, 
+  serverOutline, 
+  chevronDownOutline,
+  flashOutline,
+  personOutline,
+  lockClosedOutline,
+  globeOutline,
+  checkmark
+} from 'ionicons/icons';
 
 @Component({
   selector: 'app-login',
@@ -343,7 +354,12 @@ export class LoginPage implements OnInit {
       'eye-off-outline': eyeOffOutline,
       'settings-outline': settingsOutline,
       'server-outline': serverOutline,
-      'chevron-down-outline': chevronDownOutline
+      'chevron-down-outline': chevronDownOutline,
+      'flash-outline': flashOutline,
+      'person-outline': personOutline,
+      'lock-closed-outline': lockClosedOutline,
+      'globe-outline': globeOutline,
+      'checkmark': checkmark
     });
   }
 
