@@ -1,7 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
-import { IonicModule, ActionSheetController } from '@ionic/angular/standalone';
+import {
+  IonHeader,
+  IonToolbar,
+  IonButtons,
+  IonMenuButton,
+  IonTitle,
+  IonButton,
+  IonIcon,
+  IonContent,
+  IonRefresher,
+  IonRefresherContent,
+  IonItem,
+  IonSkeletonText,
+  IonList,
+  IonItemSliding,
+  IonLabel,
+  IonBadge,
+  IonItemOptions,
+  IonItemOption,
+  IonFab,
+  IonFabButton,
+  ActionSheetController
+} from '@ionic/angular/standalone';
 import { IssueService } from '../../services/issue.service';
 import { Issue } from '../../models';
 
@@ -136,7 +158,7 @@ import { Issue } from '../../models';
     }
   `],
   standalone: true,
-  imports: [CommonModule, IonicModule, RouterModule]
+  imports: [CommonModule, RouterModule, IonHeader, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonButton, IonIcon, IonContent, IonRefresher, IonRefresherContent, IonItem, IonSkeletonText, IonList, IonItemSliding, IonLabel, IonBadge, IonItemOptions, IonItemOption, IonFab, IonFabButton]
 })
 export class IssuesPage implements OnInit {
   issues: Issue[] = [];

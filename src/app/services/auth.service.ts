@@ -46,7 +46,7 @@ export class AuthService {
       .pipe(
         tap(async (response) => {
           await this.storeAuth(response);
-          this.currentUserSubject.next(response);
+          this.currentUserSubject.next(response as User);
           this.isAuthenticatedSubject.next(true);
         })
       );

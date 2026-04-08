@@ -1,7 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
-import { IonicModule } from '@ionic/angular/standalone';
+import {
+  IonHeader,
+  IonToolbar,
+  IonButtons,
+  IonMenuButton,
+  IonTitle,
+  IonButton,
+  IonIcon,
+  IonContent,
+  IonRefresher,
+  IonRefresherContent,
+  IonSkeletonText,
+  IonCard,
+  IonCardHeader,
+  IonCardTitle,
+  IonBadge,
+  IonCardContent,
+  IonAvatar
+} from '@ionic/angular/standalone';
 import { TaskService } from '../../services/task.service';
 import { Task, Status } from '../../models';
 
@@ -206,7 +224,27 @@ import { Task, Status } from '../../models';
     }
   `],
   standalone: true,
-  imports: [CommonModule, IonicModule, RouterModule]
+  imports: [
+    CommonModule,
+    RouterModule,
+    IonHeader,
+    IonToolbar,
+    IonButtons,
+    IonMenuButton,
+    IonTitle,
+    IonButton,
+    IonIcon,
+    IonContent,
+    IonRefresher,
+    IonRefresherContent,
+    IonSkeletonText,
+    IonCard,
+    IonCardHeader,
+    IonCardTitle,
+    IonBadge,
+    IonCardContent,
+    IonAvatar
+  ]
 })
 export class KanbanPage implements OnInit {
   tasks: Task[] = [];

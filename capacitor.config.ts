@@ -3,7 +3,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 const config: CapacitorConfig = {
   appId: 'io.taiga.mobile',
   appName: 'Taiga Mobile',
-  webDir: 'www',
+  webDir: 'www/browser',
   server: {
     androidScheme: 'https',
     cleartext: true

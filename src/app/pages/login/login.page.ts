@@ -2,7 +2,23 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { IonicModule, LoadingController, ToastController } from '@ionic/angular/standalone';
+import { 
+  IonContent,
+  IonIcon,
+  IonCard,
+  IonCardContent,
+  IonList,
+  IonItem,
+  IonLabel,
+  IonInput,
+  IonButton,
+  IonCardHeader,
+  IonCardTitle,
+  IonSpinner,
+  IonNote,
+  LoadingController,
+  ToastController
+} from '@ionic/angular/standalone';
 import { AuthService } from '../../services/auth.service';
 import { ServerConfigService } from '../../services/server-config.service';
 import { LoginCredentials, TaigaServer } from '../../models';
@@ -284,7 +300,19 @@ import { eyeOutline, eyeOffOutline, settingsOutline, serverOutline, chevronDownO
   standalone: true,
   imports: [
     CommonModule,
-    IonicModule,
+    IonContent,
+    IonIcon,
+    IonCard,
+    IonCardContent,
+    IonList,
+    IonItem,
+    IonLabel,
+    IonInput,
+    IonButton,
+    IonCardHeader,
+    IonCardTitle,
+    IonSpinner,
+    IonNote,
     ReactiveFormsModule,
     RouterModule
   ]

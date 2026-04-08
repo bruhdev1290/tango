@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicModule } from '@ionic/angular/standalone';
+import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
 import { RouterModule } from '@angular/router';
 import { addIcons } from 'ionicons';
 import {
@@ -56,7 +56,7 @@ import {
     </ion-app>
   `,
   standalone: true,
-  imports: [IonicModule, RouterModule]
+  imports: [IonApp, IonRouterOutlet, RouterModule]
 })
 export class AppComponent {
   constructor() {

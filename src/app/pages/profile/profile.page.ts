@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
-import { IonicModule, ActionSheetController, AlertController } from '@ionic/angular/standalone';
+import { ActionSheetController, AlertController } from '@ionic/angular/standalone';
+import { IonHeader, IonToolbar, IonTitle, IonButtons, IonButton, IonIcon, IonContent, IonList, IonListHeader, IonLabel, IonItem, IonChip, IonBadge } from '@ionic/angular/standalone';
 import { AuthService } from '../../services/auth.service';
 import { ServerConfigService } from '../../services/server-config.service';
 import { User, TaigaServer } from '../../models';
@@ -244,7 +245,7 @@ import { User, TaigaServer } from '../../models';
     }
   `],
   standalone: true,
-  imports: [CommonModule, IonicModule, RouterModule]
+  imports: [CommonModule, RouterModule, IonHeader, IonToolbar, IonTitle, IonButtons, IonButton, IonIcon, IonContent, IonList, IonListHeader, IonLabel, IonItem, IonChip, IonBadge]
 })
 export class ProfilePage implements OnInit {
   user: User | null = null;
@@ -316,13 +317,13 @@ export class ProfilePage implements OnInit {
     buttons.push({
       text: 'Manage Servers',
       icon: 'settings-outline',
-      handler: () => this.manageServers()
+      handler: async () => { await this.manageServers(); }
     });
 
     buttons.push({
       text: 'Cancel',
       icon: 'close',
-      role: 'cancel'
+      handler: async () => { }
     });
 
     const actionSheet = await this.actionSheetController.create({

@@ -12,7 +12,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "ionic:serve": "ionic serve",
-    "ionic:build": "ionic build",
+    "ionic:build": "ng build",
     "ionic:android": "ionic capacitor add android",
     "ionic:ios": "ionic capacitor add ios",
     "sync": "ionic capacitor sync"
@@ -29,6 +29,7 @@
     "@capacitor/app": "5.0.0",
     "@capacitor/core": "5.0.0",
     "@capacitor/haptics": "5.0.0",
+    "@capacitor/ios": "5.0.0",
     "@capacitor/keyboard": "5.0.0",
     "@capacitor/preferences": "^5.0.0",
     "@capacitor/splash-screen": "5.0.0",

@@ -1,17 +1,17 @@
-import { HttpInterceptorFn } from '@angular/common/http';
+import { HttpInterceptorFn, HttpEvent } from '@angular/common/http';
 import { inject } from '@angular/core';
-import { catchError, throwError } from 'rxjs';
+import { catchError, Observable, switchMap, throwError, from } from 'rxjs';
 import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular/standalone';
 import { AuthService } from '../services/auth.service';
 
-export const errorInterceptor: HttpInterceptorFn = (req, next) => {
+export const errorInterceptor: HttpInterceptorFn = (req, next): Observable<HttpEvent<unknown>> => {
   const router = inject(Router);
   const toastController = inject(ToastController);
   const authService = inject(AuthService);
 
   return next(req).pipe(
-    catchError(async (error) => {
+    catchError(error => {
       let message = 'An error occurred';
 
       if (error.error) {
@@ -37,8 +37,9 @@ export const errorInterceptor: HttpInterceptorFn = (req, next) => {
 
       if (error.status === 401) {
         message = 'Session expired. Please login again.';
-        await authService.logout();
-        router.navigate(['/login']);
+        authService.logout().then(() => {
+          router.navigate(['/login']);
+        });
       } else if (error.status === 403) {
         message = 'You do not have permission to perform this action';
       } else if (error.status === 404) {
@@ -47,7 +48,7 @@ export const errorInterceptor: HttpInterceptorFn = (req, next) => {
         message = 'Network error. Please check your connection.';
       }
 
-      const toast = await toastController.create({
+      return from(toastController.create({
         message,
         duration: 3000,
         position: 'bottom',
@@ -58,10 +59,10 @@ export const errorInterceptor: HttpInterceptorFn = (req, next) => {
             role: 'cancel'
           }
         ]
-      });
-      await toast.present();
-
-      return throwError(() => error);
+      })).pipe(
+        switchMap(toast => from(toast.present())),
+        switchMap(() => throwError(() => error))
+      );
     })
   );
 };

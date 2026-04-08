@@ -1,7 +1,34 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
-import { IonicModule, RefresherCustomEvent, LoadingController, ActionSheetController } from '@ionic/angular/standalone';
+import {
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonButtons,
+  IonButton,
+  IonIcon,
+  IonSearchbar,
+  IonContent,
+  IonRefresher,
+  IonRefresherContent,
+  IonCard,
+  IonCardHeader,
+  IonSkeletonText,
+  IonList,
+  IonAvatar,
+  IonCardTitle,
+  IonCardSubtitle,
+  IonBadge,
+  IonCardContent,
+  IonInfiniteScroll,
+  IonInfiniteScrollContent,
+  IonFab,
+  IonFabButton,
+  RefresherCustomEvent,
+  LoadingController,
+  ActionSheetController
+} from '@ionic/angular/standalone';
 import { ProjectService } from '../../services/project.service';
 import { Project } from '../../models';
 import { addIcons } from 'ionicons';
@@ -196,7 +223,33 @@ import { addOutline, searchOutline, ellipsisVerticalOutline, heartOutline, heart
     }
   `],
   standalone: true,
-  imports: [CommonModule, IonicModule, RouterModule]
+  imports: [
+    CommonModule,
+    RouterModule,
+    IonHeader,
+    IonToolbar,
+    IonTitle,
+    IonButtons,
+    IonButton,
+    IonIcon,
+    IonSearchbar,
+    IonContent,
+    IonRefresher,
+    IonRefresherContent,
+    IonCard,
+    IonCardHeader,
+    IonSkeletonText,
+    IonList,
+    IonAvatar,
+    IonCardTitle,
+    IonCardSubtitle,
+    IonBadge,
+    IonCardContent,
+    IonInfiniteScroll,
+    IonInfiniteScrollContent,
+    IonFab,
+    IonFabButton
+  ]
 })
 export class ProjectsPage implements OnInit {
   projects: Project[] = [];

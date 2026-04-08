@@ -37,6 +37,8 @@ export interface AuthResponse {
   big_photo: string | null;
   gravatar_id: string;
   roles: string[];
+  total_private_projects?: number;
+  total_public_projects?: number;
 }
 
 export interface LoginCredentials {

@@ -2,7 +2,22 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { IonicModule, LoadingController } from '@ionic/angular/standalone';
+import {
+  IonHeader,
+  IonToolbar,
+  IonButtons,
+  IonBackButton,
+  IonTitle,
+  IonContent,
+  IonList,
+  IonItem,
+  IonInput,
+  IonCheckbox,
+  IonLabel,
+  IonButton,
+  IonSpinner,
+  LoadingController
+} from '@ionic/angular/standalone';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -88,7 +103,19 @@ import { AuthService } from '../../services/auth.service';
   standalone: true,
   imports: [
     CommonModule,
-    IonicModule,
+    IonHeader,
+    IonToolbar,
+    IonButtons,
+    IonBackButton,
+    IonTitle,
+    IonContent,
+    IonList,
+    IonItem,
+    IonInput,
+    IonCheckbox,
+    IonLabel,
+    IonButton,
+    IonSpinner,
     ReactiveFormsModule,
     RouterModule
   ]

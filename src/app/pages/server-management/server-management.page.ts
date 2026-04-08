@@ -2,7 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
-import { IonicModule, AlertController, ToastController, LoadingController, ActionSheetController } from '@ionic/angular/standalone';
+import { 
+  IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle,
+  IonContent, IonIcon, IonList, IonListHeader, IonLabel,
+  IonItemSliding, IonItem, IonCheckbox, IonInput, IonNote,
+  IonButton, IonSpinner, IonCard, IonCardHeader, IonCardTitle, IonCardContent,
+  AlertController, ToastController, LoadingController, ActionSheetController 
+} from '@ionic/angular/standalone';
 import { ServerConfigService } from '../../services/server-config.service';
 import { TaigaServer } from '../../models';
 import { addIcons } from 'ionicons';
@@ -203,7 +209,13 @@ import { addOutline, checkmarkOutline, trashOutline, createOutline, serverOutlin
     }
   `],
   standalone: true,
-  imports: [CommonModule, IonicModule, RouterModule, ReactiveFormsModule]
+  imports: [
+    CommonModule, RouterModule, ReactiveFormsModule,
+    IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle,
+    IonContent, IonIcon, IonList, IonListHeader, IonLabel,
+    IonItemSliding, IonItem, IonCheckbox, IonInput, IonNote,
+    IonButton, IonSpinner, IonCard, IonCardHeader, IonCardTitle, IonCardContent
+  ]
 })
 export class ServerManagementPage implements OnInit {
   servers: TaigaServer[] = [];

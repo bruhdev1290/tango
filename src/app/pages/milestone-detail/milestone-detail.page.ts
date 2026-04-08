@@ -1,7 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
-import { IonicModule } from '@ionic/angular/standalone';
+import {
+  IonHeader,
+  IonToolbar,
+  IonButtons,
+  IonBackButton,
+  IonTitle,
+  IonContent,
+  IonCard,
+  IonCardHeader,
+  IonCardTitle,
+  IonCardContent,
+  IonProgressBar,
+  IonItem,
+  IonIcon,
+  IonLabel,
+  IonBadge,
+  IonList,
+  IonListHeader
+} from '@ionic/angular/standalone';
 import { MilestoneService } from '../../services/milestone.service';
 import { UserStoryService } from '../../services/user-story.service';
 import { Milestone, UserStory } from '../../models';
@@ -178,7 +196,27 @@ import { Milestone, UserStory } from '../../models';
     }
   `],
   standalone: true,
-  imports: [CommonModule, IonicModule, RouterModule]
+  imports: [
+    CommonModule,
+    RouterModule,
+    IonHeader,
+    IonToolbar,
+    IonButtons,
+    IonBackButton,
+    IonTitle,
+    IonContent,
+    IonCard,
+    IonCardHeader,
+    IonCardTitle,
+    IonCardContent,
+    IonProgressBar,
+    IonItem,
+    IonIcon,
+    IonLabel,
+    IonBadge,
+    IonList,
+    IonListHeader
+  ]
 })
 export class MilestoneDetailPage implements OnInit {
   milestone: Milestone | null = null;

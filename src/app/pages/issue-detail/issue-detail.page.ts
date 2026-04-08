@@ -1,7 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
-import { IonicModule, ActionSheetController } from '@ionic/angular/standalone';
+import {
+  IonHeader,
+  IonToolbar,
+  IonButtons,
+  IonBackButton,
+  IonTitle,
+  IonButton,
+  IonIcon,
+  IonContent,
+  IonCard,
+  IonCardHeader,
+  IonCardTitle,
+  IonBadge,
+  IonCardContent,
+  IonItem,
+  IonAvatar,
+  IonLabel,
+  IonList,
+  IonListHeader,
+  IonNote,
+  IonChip,
+  ActionSheetController
+} from '@ionic/angular/standalone';
 import { IssueService } from '../../services/issue.service';
 import { Issue } from '../../models';
 
@@ -218,7 +240,30 @@ import { Issue } from '../../models';
     }
   `],
   standalone: true,
-  imports: [CommonModule, IonicModule, RouterModule]
+  imports: [
+    CommonModule,
+    RouterModule,
+    IonHeader,
+    IonToolbar,
+    IonButtons,
+    IonBackButton,
+    IonTitle,
+    IonButton,
+    IonIcon,
+    IonContent,
+    IonCard,
+    IonCardHeader,
+    IonCardTitle,
+    IonBadge,
+    IonCardContent,
+    IonItem,
+    IonAvatar,
+    IonLabel,
+    IonList,
+    IonListHeader,
+    IonNote,
+    IonChip
+  ]
 })
 export class IssueDetailPage implements OnInit {
   issue: Issue | null = null;

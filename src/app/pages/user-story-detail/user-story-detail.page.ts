@@ -1,7 +1,31 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
-import { IonicModule, ActionSheetController, AlertController, ToastController } from '@ionic/angular/standalone';
+import {
+  IonHeader,
+  IonToolbar,
+  IonButtons,
+  IonBackButton,
+  IonTitle,
+  IonButton,
+  IonIcon,
+  IonContent,
+  IonCard,
+  IonCardHeader,
+  IonCardTitle,
+  IonCardContent,
+  IonBadge,
+  IonItem,
+  IonAvatar,
+  IonLabel,
+  IonList,
+  IonListHeader,
+  IonNote,
+  IonChip,
+  ActionSheetController,
+  AlertController,
+  ToastController
+} from '@ionic/angular/standalone';
 import { UserStoryService } from '../../services/user-story.service';
 import { UserStory } from '../../models';
 
@@ -182,7 +206,30 @@ import { UserStory } from '../../models';
     }
   `],
   standalone: true,
-  imports: [CommonModule, IonicModule, RouterModule]
+  imports: [
+    CommonModule,
+    RouterModule,
+    IonHeader,
+    IonToolbar,
+    IonButtons,
+    IonBackButton,
+    IonTitle,
+    IonButton,
+    IonIcon,
+    IonContent,
+    IonCard,
+    IonCardHeader,
+    IonCardTitle,
+    IonCardContent,
+    IonBadge,
+    IonItem,
+    IonAvatar,
+    IonLabel,
+    IonList,
+    IonListHeader,
+    IonNote,
+    IonChip
+  ]
 })
 export class UserStoryDetailPage implements OnInit {
   userStory: UserStory | null = null;

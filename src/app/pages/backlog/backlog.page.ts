@@ -1,7 +1,30 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
-import { IonicModule, ActionSheetController, ModalController } from '@ionic/angular/standalone';
+import { 
+  IonHeader, 
+  IonToolbar, 
+  IonButtons, 
+  IonMenuButton, 
+  IonTitle, 
+  IonButton, 
+  IonContent, 
+  IonRefresher, 
+  IonRefresherContent, 
+  IonItem, 
+  IonSkeletonText, 
+  IonIcon, 
+  IonAccordionGroup, 
+  IonAccordion, 
+  IonList, 
+  IonLabel, 
+  IonBadge, 
+  IonItemSliding, 
+  IonItemOptions, 
+  IonItemOption,
+  ActionSheetController, 
+  ModalController 
+} from '@ionic/angular/standalone';
 import { UserStoryService } from '../../services/user-story.service';
 import { UserStory, UserStoryStatus } from '../../models';
 import { FormsModule } from '@angular/forms';
@@ -171,7 +194,31 @@ import { FormsModule } from '@angular/forms';
     }
   `],
   standalone: true,
-  imports: [CommonModule, IonicModule, RouterModule, FormsModule]
+  imports: [
+    CommonModule, 
+    RouterModule, 
+    FormsModule,
+    IonHeader,
+    IonToolbar,
+    IonButtons,
+    IonMenuButton,
+    IonTitle,
+    IonButton,
+    IonContent,
+    IonRefresher,
+    IonRefresherContent,
+    IonItem,
+    IonSkeletonText,
+    IonIcon,
+    IonAccordionGroup,
+    IonAccordion,
+    IonList,
+    IonLabel,
+    IonBadge,
+    IonItemSliding,
+    IonItemOptions,
+    IonItemOption
+  ]
 })
 export class BacklogPage implements OnInit {
   userStories: UserStory[] = [];

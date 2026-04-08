@@ -1,7 +1,31 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
-import { IonicModule, ActionSheetController, LoadingController } from '@ionic/angular/standalone';
+import {
+  IonHeader,
+  IonToolbar,
+  IonButtons,
+  IonBackButton,
+  IonTitle,
+  IonButton,
+  IonIcon,
+  IonContent,
+  IonCard,
+  IonCardHeader,
+  IonCardTitle,
+  IonCardSubtitle,
+  IonCardContent,
+  IonAvatar,
+  IonChip,
+  IonLabel,
+  IonList,
+  IonListHeader,
+  IonItem,
+  IonBadge,
+  IonNote,
+  ActionSheetController,
+  LoadingController
+} from '@ionic/angular/standalone';
 import { ProjectService } from '../../services/project.service';
 import { ProjectDetail, Milestone } from '../../models';
 import { MilestoneService } from '../../services/milestone.service';
@@ -181,7 +205,31 @@ import { MilestoneService } from '../../services/milestone.service';
     }
   `],
   standalone: true,
-  imports: [CommonModule, IonicModule, RouterModule]
+  imports: [
+    CommonModule,
+    RouterModule,
+    IonHeader,
+    IonToolbar,
+    IonButtons,
+    IonBackButton,
+    IonTitle,
+    IonButton,
+    IonIcon,
+    IonContent,
+    IonCard,
+    IonCardHeader,
+    IonCardTitle,
+    IonCardSubtitle,
+    IonCardContent,
+    IonAvatar,
+    IonChip,
+    IonLabel,
+    IonList,
+    IonListHeader,
+    IonItem,
+    IonBadge,
+    IonNote
+  ]
 })
 export class ProjectDetailPage implements OnInit {
   project: ProjectDetail | null = null;

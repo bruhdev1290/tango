@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { IonicModule } from '@ionic/angular/standalone';
+import { IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-tabs',
@@ -35,6 +35,6 @@ import { IonicModule } from '@ionic/angular/standalone';
     </ion-tabs>
   `,
   standalone: true,
-  imports: [IonicModule, RouterModule]
+  imports: [IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel, RouterModule]
 })
 export class TabsPage {}

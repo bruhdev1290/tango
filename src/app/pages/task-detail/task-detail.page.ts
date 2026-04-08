@@ -1,7 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
-import { IonicModule, ActionSheetController } from '@ionic/angular/standalone';
+import {
+  IonHeader,
+  IonToolbar,
+  IonButtons,
+  IonBackButton,
+  IonTitle,
+  IonButton,
+  IonIcon,
+  IonContent,
+  IonCard,
+  IonCardHeader,
+  IonCardTitle,
+  IonCardContent,
+  IonBadge,
+  IonItem,
+  IonAvatar,
+  IonLabel,
+  IonList,
+  IonListHeader,
+  ActionSheetController
+} from '@ionic/angular/standalone';
 import { TaskService } from '../../services/task.service';
 import { Task } from '../../models';
 
@@ -172,7 +192,7 @@ import { Task } from '../../models';
     }
   `],
   standalone: true,
-  imports: [CommonModule, IonicModule, RouterModule]
+  imports: [CommonModule, RouterModule, IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle, IonButton, IonIcon, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonBadge, IonItem, IonAvatar, IonLabel, IonList, IonListHeader]
 })
 export class TaskDetailPage implements OnInit {
   task: Task | null = null;
